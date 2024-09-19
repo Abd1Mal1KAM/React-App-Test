@@ -1,4 +1,4 @@
-import { DataTypes, Model, Sequelize } from 'sequelize';
+import { DataTypes, Model } from 'sequelize';
 import db from './index.js'; // Sequelize instance
 
 const sequelize = db.sequelize;
@@ -22,3 +22,5 @@ User.init(
     modelName: 'User',
   }
 );
+
+export default User;
