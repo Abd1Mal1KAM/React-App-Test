@@ -41,7 +41,7 @@ fs.readdirSync(__dirname)
     const modelPath = path.join(__dirname, file);
     import(modelPath)
       .then((module) => {
-        const model = module.default(sequelize, Sequelize.DataTypes);
+        const model = module.default;
         db[model.name] = model;  // Assign the model to db object here
       })
       .catch((err) => {
